@@ -1,12 +1,10 @@
-.field-text{
-    margin: 24px 0;
+.dropdownlist label{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
 
 }
-.field-text label{
-    display: block;
-    
-}
-.field-text input{
+.dropdownlist select{
     background-color: #FFF;
     box-shadow: 10px 10px 30px rgba(0,0,0,0.06);
     width: 100%;
@@ -14,4 +12,5 @@
     font-size: 24px;
     padding: 24px;
     box-sizing: border-box;
+
 }
