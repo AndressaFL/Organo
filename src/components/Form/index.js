@@ -4,18 +4,34 @@ import Button from "../Button";
 import "./Form.css";
 import { useState } from "react";
 
-const Form = () => {
-  const teams = ["Developer", "Front-End", "Mobile"];
+const Form = (props) => {
+  
+  const teams = [
+    'Developer',
+    'Front-End', 
+    'Mobile',
+    'Data Science',
+    'Devops',
+    'Managment']
 
-  const [name, setName] = useState("");
-  const [position, setPosition] = useState("");
-  const [image, setImage] = useState("");
-  const [team, setTeam] = useState("");
+
+  const [name, setName] = useState('');
+  const [position, setPosition] = useState('');
+  const [image, setImage] = useState('');
+  const [team, setTeam] = useState('');
 
   const onSave = (event) => {
-    event.preventDefault();
-    console.log("Form has sent", name, position, image, team);
-  };
+    event.preventDefault()
+    props.employeeAdded({
+     //create prop 
+      name,
+      position,
+      image,
+      team
+
+    })
+    //console.log("Form has sent", name, position, image, team);
+  }
 
   return (
     <section className="form">
