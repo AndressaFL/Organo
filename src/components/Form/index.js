@@ -22,6 +22,7 @@ const Form = (props) => {
       team
 
     })
+    //clean the form
     setName('')
     setPosition('')
     setImage('')
