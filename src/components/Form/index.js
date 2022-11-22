@@ -6,14 +6,6 @@ import { useState } from "react";
 
 const Form = (props) => {
   
-  const teams = [
-    'Developer',
-    'Front-End', 
-    'Mobile',
-    'Data Science',
-    'Devops',
-    'Managment']
-
 
   const [name, setName] = useState('');
   const [position, setPosition] = useState('');
@@ -30,6 +22,11 @@ const Form = (props) => {
       team
 
     })
+    setName('')
+    setPosition('')
+    setImage('')
+    setTeam('')
+    
     //console.log("Form has sent", name, position, image, team);
   }
 
@@ -60,13 +57,14 @@ const Form = (props) => {
         <DropDownList
           required={true}
           label="team"
-          itens={teams}
+          itens={props.teams}
           input={team}
           onChanged={(input) => setTeam(input)}
         />
         <Button>Create Card</Button>
       </form>
     </section>
+
   );
 };
 export default Form;
