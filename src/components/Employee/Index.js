@@ -1,10 +1,11 @@
 import "./Employee.css";
 
 //using props , same as (props)
-const Employee = ({ name, image, position }) => {
+const Employee = ({ name, image, position, cabecalhoColor }) => {
   return (
     <div className="employee">
-      <div className="cabecalho">
+       <div className="cabecalho"
+            style={{ backgroundColor: cabecalhoColor }}>
         <img src={image} alt="" />
       </div>
       <div className="footer">

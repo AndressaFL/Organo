@@ -7,18 +7,19 @@ const Team = (props) => {
     props.employees.length > 0 && (
       <section
         className="team"
-        style={{ backgroundColor: props.colorSecondary }}>
+        style={{ backgroundColor: props.colorSecondary }}
+      >
         <h3 style={{ borderColor: props.colorPrimary }}>{props.name}</h3>
         <div className="employees">
-          <div className="cabecalho"
-            style={{ backgroundColor: props.colorPrimary }}>
-            {props.employees.map((employee) => (
-              <Employee
-                name={employee.name}
-                position={employee.position}
-                image={employee.image}/>
-            ))}
-          </div>
+          {props.employees.map((employee) => (
+            <Employee
+              cabecalhoColor={props.colorPrimary}
+              key={employee.name}
+              name={employee.name}
+              position={employee.position}
+              image={employee.image}
+            />
+          ))}
         </div>
       </section>
     )

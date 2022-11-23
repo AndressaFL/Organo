@@ -7,8 +7,9 @@ const DropDownList = (props) => {
       <select
         onChange={(event) => props.onChanged(event.target.value)}
         required={props.required}
-        value={props.value}
+        value={props.input}
       >
+        <option value =""></option>
         {props.itens.map((item) => {
           return <option key={item}>{item}</option>;
         })}
